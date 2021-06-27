@@ -1,10 +1,16 @@
 const {Router} = require('express');
 const router = Router();
 const Project = require('../models/Project')
-const projectBL = require('./models/projectBL')
 
 router.get('/', async (req,res) => {
-    let projects = await Project.find({})
+    try {
+        let projects = await Project.find({});
+        res.json(projects);
+    }
+    catch (e) {
+        res.status(500).json('Something went wrong')
+    }
+
 })
 
 module.exports = router;

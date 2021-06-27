@@ -1,0 +1,63 @@
+$violetColor: #7561AE;
+$whiteColor: #FFFFFF; 
+$greenColor: #61AE62;
+
+* {
+  margin:0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: $violetColor;
+  &__navbar {
+    display: flex;
+    justify-content: flex-start;
+    flex-basis: 50%;
+  }
+  &__logo {
+    align-self: center;
+    text-transform: uppercase;
+  }
+  &__icons {
+    align-self: center
+  }
+  &__link {
+    text-decoration: none;
+    padding: 15px 20px;
+    color: $whiteColor;
+    &:hover {
+      color: $greenColor;
+      font-weight: 700;
+    }
+  }
+}
+
+.active-link {
+    color: $greenColor;
+    font-weight: 700;
+    border-bottom: 3px solid $greenColor;
+}
+
+.section {
+  background-image: url('background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: calc(100vh - 50px);
+  &__main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: $whiteColor;
+    text-align: center;
+    height: 100%;
+    & h1 {
+      font-size: 60px;
+      font-weight: 300;
+    } 
+    & h2 {
+      font-size: 50px;
+      font-weight: 300;
+    }
+  }
+}

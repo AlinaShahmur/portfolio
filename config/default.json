@@ -1,4 +1,4 @@
 {
    "port": 8000,
-    "Dbmongo": "mongodb+srv://alina:alina2608@cluster0.6a8ed.mongodb.net/app?retryWrites=true&w=majority"
+    "Dbmongo": "mongodb+srv://alina:alina2608@cluster0.6a8ed.mongodb.net/portfolio?retryWrites=true&w=majority"
 }
