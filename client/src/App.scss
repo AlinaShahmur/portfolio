@@ -61,3 +61,32 @@ $greenColor: #61AE62;
     }
   }
 }
+
+.projects {
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;  
+  }
+  &__item{
+    text-align: center;
+    a {
+      text-decoration: none;
+      color: $whiteColor;
+    }
+    img {
+      width: 450px;
+      height:auto;
+      border: 3px solid $violetColor;
+      border-radius: 10px;;
+    }
+  }
+}
+
+.title-h1 {
+  color:$whiteColor;
+  font-size: 72px;
+  font-weight:300;
+  text-align: center;
+}
+
+
