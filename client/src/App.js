@@ -1,12 +1,10 @@
 import './App.scss';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
-import home from './components/home';
-import about from './components/about';
-import contact from './components/contact';
-import portfolio from './components/portfolio'
-import NavBar from './components/header';
-
-
+import home from './components/Home';
+import about from './components/About';
+import contact from './components/Contact';
+import portfolio from './components/Portfolio'
+import NavBar from './components/Header';
 
 function App() {
   return (

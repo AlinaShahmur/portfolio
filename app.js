@@ -10,5 +10,3 @@ const cors = require('cors')
 app.use(cors())
 app.use('/api/projects', projectsRouter)
 app.listen(PORT, () => console.log(`listening on port ${PORT}`));
-
-

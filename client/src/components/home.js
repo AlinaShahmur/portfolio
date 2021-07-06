@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import '../App.scss'
-export default function about() {   
+export default function Home() {   
     return (
         <section className = "section">
             <div className = "section__main"> 
