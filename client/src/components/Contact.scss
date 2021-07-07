@@ -3,3 +3,31 @@
         color: #b30000;
     }
 }
+
+
+
+.contact-container {
+    display: flex;
+    justify-content: space-evenly;
+
+
+}
+
+.form {
+    &__control {
+        margin-bottom: 20px;
+        & input, textarea {
+            width: 100%;
+            padding: 5px;
+        }
+    }
+    & button {
+        width: 30%;    
+    }
+}
+
+.contact {
+    &__item {
+        width: 400px;
+    }
+}

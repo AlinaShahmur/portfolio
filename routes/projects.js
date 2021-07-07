@@ -10,7 +10,8 @@ router.get('/', async (req,res) => {
     catch (e) {
         res.status(500).json('Something went wrong')
     }
-
 })
+
+
 
 module.exports = router;

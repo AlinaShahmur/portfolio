@@ -30,8 +30,9 @@ export default function Contact(props) {
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify(formData),
             }
-            fetch('http://localhost:8000/api/projects',fetchParams)
-            .then(data => console.log(data))
+            fetch('http://localhost:8000/api/mails',fetchParams)
+            .then(data => data.json())
+            .then(resp => alert(resp))
             
             setInputValues({
                 name: '',
@@ -91,31 +92,34 @@ export default function Contact(props) {
         <section className = "section">
             <div className = "contact">
                 <h1 className = "title-h1">Contact</h1>
-                <div className = "contact__item">
-                    <h3>Send me an email</h3>
-                    <form className = "form" onSubmit = {submitHandler} noValidate>
-                        <div className = "form__control">
-                            <input value = {inputValues.name} onChange = {getNameHandler} type="text" placeholder = "name" ></input>
-                            <p className = "form__error">{errors.name}</p>
-                        </div>
-                        <div>
-                            <input value = {inputValues.email} onChange = {getEmailHandler} type= "email" placeholder = "email"></input>
-                            <p className = "form__error">{errors.email}</p>
-                        </div>
-                        <div>
-                            <input value = {inputValues.phNumber} onChange = {getPhoneHandler} placeholder = "phone number"></input>
-                            <p className = "form__error">{errors.phNumber}</p>
-                        </div>
-                        <div>
-                            <textarea value = {inputValues.message} onChange = {getMessageHandler} placeholder = "your message"></textarea>
-                            <p className = "form__error">{errors.message}</p>
-                        </div>
-                        <button>Send</button>
-                    </form>
+                <div className = "contact-container">
+                    <div className = "contact__item">
+                        <h3>Send me an email</h3>
+                        <form className = "contact__form form" onSubmit = {submitHandler} noValidate>
+                            <div className = "form__control">
+                                <input value = {inputValues.name} onChange = {getNameHandler} type="text" placeholder = "name" ></input>
+                                <p className = "form__error">{errors.name}</p>
+                            </div>
+                            <div className = "form__control">
+                                <input value = {inputValues.email} onChange = {getEmailHandler} type= "email" placeholder = "email"></input>
+                                <p className = "form__error">{errors.email}</p>
+                            </div>
+                            <div className = "form__control">
+                                <input value = {inputValues.phNumber} onChange = {getPhoneHandler} placeholder = "phone number"></input>
+                                <p className = "form__error">{errors.phNumber}</p>
+                            </div>
+                            <div className = "form__control">
+                                <textarea value = {inputValues.message} onChange = {getMessageHandler} placeholder = "your message"></textarea>
+                                <p className = "form__error">{errors.message}</p>
+                            </div>
+                            <button >Send</button>
+                        </form>
+                    </div>
+                    <div className = "contact__item">
+                        <h3>Or contact me in social media</h3>
+                    </div>
                 </div>
-                <div className = "contact__item">
-                    <h3>Or contact me in social media</h3>
-                </div>
+               
             </div>
 
         </section>
