@@ -1,6 +1,6 @@
 $violetColor: #7561AE;
 $whiteColor: #FFFFFF; 
-$greenColor: #61AE62;
+$turquoiseColor:#669999;
 
 * {
   margin:0;
@@ -27,22 +27,14 @@ $greenColor: #61AE62;
     padding: 15px 20px;
     color: $whiteColor;
     &:hover {
-      color: $greenColor;
+      color: $turquoiseColor;
       font-weight: 700;
     }
   }
 }
 
-.active-link {
-    color: $greenColor;
-    font-weight: 700;
-    border-bottom: 3px solid $greenColor;
-}
 
 .section {
-  background-image: url('background.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
   height: calc(100vh - 50px);
   &__main {
     display: flex;
@@ -62,31 +54,31 @@ $greenColor: #61AE62;
   }
 }
 
-.projects {
-  &__container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;  
-  }
-  &__item{
-    text-align: center;
-    a {
-      text-decoration: none;
-      color: $whiteColor;
-    }
-    img {
-      width: 450px;
-      height:auto;
-      border: 3px solid $violetColor;
-      border-radius: 10px;;
-    }
-  }
-}
 
 .title-h1 {
-  color:$whiteColor;
+  color:$violetColor;
   font-size: 72px;
   font-weight:300;
   text-align: center;
+  margin-bottom: 30px;
+  padding-top: 30px;
 }
 
+.title-h3 {
+  color: $violetColor;
+  margin: 20px;
+}
+
+.btn {
+  font-family: 'Montserrat', sans-serif; 
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid $turquoiseColor;
+  background-color: $turquoiseColor;
+  color: $whiteColor;
+}
+.btn:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
 

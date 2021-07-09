@@ -1,0 +1,41 @@
+$violetColor: #7561AE;
+$whiteColor: #FFFFFF; 
+$turquoiseColor:#669999;
+
+.projects {
+    &__container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;  
+    }
+    &__item{
+      text-align: center;
+      a {
+        text-decoration: none;
+        color: $turquoiseColor
+      }
+      img {
+        width: 450px;
+        height:auto;
+        border: 3px solid $turquoiseColor;
+        border-radius: 10px;;
+      }
+    }
+  }
+
+@media screen and (max-width: 1200px) {
+    .projects {
+        &__container {
+          display: grid;
+          grid-template-columns: 1fr 1fr;  
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .projects {
+        &__container {
+          display: grid;
+          grid-template-columns: 1fr;  
+        }
+    }
+}

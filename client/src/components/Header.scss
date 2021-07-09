@@ -1,0 +1,115 @@
+$violetColor: #7561AE;
+$whiteColor: #FFFFFF; 
+$turquoiseColor:#669999;
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: $violetColor;
+    &__navbar {
+      display: flex;
+      justify-content: space-between;
+      flex-basis: 50%;
+    }
+    &__logo {
+      color:$turquoiseColor;
+      font-weight: 700;
+      align-self: center;
+      text-transform: uppercase;
+      padding: 15px 20px;
+    }
+    &__icons {
+      align-self: center;
+    }
+    &__link {
+      text-decoration: none;
+      color: $whiteColor;
+      &:hover {
+        color: $turquoiseColor;
+        font-weight: 700;
+      }
+    }
+    &__toggler {
+        display: none;
+    }
+  }
+  
+  .active-link {
+      color: $turquoiseColor;
+      font-weight: 700;
+  }
+
+  @media screen and (max-width: 768px) {
+    .header {
+      flex-direction: column;
+        &__toggler {
+            display: block;
+            & input {
+              display: none;
+            } 
+            & label {
+              position: absolute;
+              top:47px;  
+              left: 5px;  
+              cursor: pointer;
+              content: '';
+              width: 15px;
+              height: 3px;
+              display: block;
+              transition: transform 0.5s;
+              background-color: $turquoiseColor;
+              transition: transform 0.5s;
+            }
+        }
+        &__navbar {
+          flex-direction: column;
+        }
+        &__icons{
+          margin: 15px;
+        }
+    }
+    .toggler-label::before,
+    .toggler-label::after {
+    content: '';
+    width: 15px;
+    height: 3px;
+    background-color: $turquoiseColor;
+    display: block;
+    position: absolute;
+    transition: transform 0.5s;
+    }
+
+  .toggler-label::before {
+    top:-5px;
+    transform-origin: left top;
+    transform: rotatez(0deg);
+    }
+
+  .toggler-label::after {
+    top:5px;
+    transform-origin: left bottom;
+    transform: rotatez(0deg);
+    }
+  
+  .toggler-input:checked ~ .toggler-label {
+    background-color: $violetColor;
+  }
+
+  .toggler-input:checked ~ .toggler-label::before{
+    transform: rotate(45deg);
+  }
+
+  .toggler-input:checked ~ .toggler-label::after{
+    transform: rotate(-45deg);
+  }
+
+}
+
+@media screen and (min-width: 1201px) {
+  .header {
+    &__navbar {
+      justify-content: flex-start;
+    }
+  }
+}
+  

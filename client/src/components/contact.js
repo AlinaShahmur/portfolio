@@ -92,9 +92,8 @@ export default function Contact(props) {
         <section className = "section">
             <div className = "contact">
                 <h1 className = "title-h1">Contact</h1>
-                <div className = "contact-container">
                     <div className = "contact__item">
-                        <h3>Send me an email</h3>
+                        <h3  className = "title-h3">Send me an email</h3>
                         <form className = "contact__form form" onSubmit = {submitHandler} noValidate>
                             <div className = "form__control">
                                 <input value = {inputValues.name} onChange = {getNameHandler} type="text" placeholder = "name" ></input>
@@ -112,14 +111,11 @@ export default function Contact(props) {
                                 <textarea value = {inputValues.message} onChange = {getMessageHandler} placeholder = "your message"></textarea>
                                 <p className = "form__error">{errors.message}</p>
                             </div>
-                            <button >Send</button>
+                            <div className= "form__button">
+                                <button className = "btn">Send</button>
+                            </div>
                         </form>
-                    </div>
-                    <div className = "contact__item">
-                        <h3>Or contact me in social media</h3>
-                    </div>
-                </div>
-               
+                </div>              
             </div>
 
         </section>
