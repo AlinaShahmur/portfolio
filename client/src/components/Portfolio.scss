@@ -16,8 +16,8 @@ $turquoiseColor:#669999;
       img {
         width: 450px;
         height:auto;
-        border: 3px solid $turquoiseColor;
-        border-radius: 10px;;
+        border-radius: 10px;
+        box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.3);
       }
     }
   }
@@ -38,4 +38,19 @@ $turquoiseColor:#669999;
           grid-template-columns: 1fr;  
         }
     }
+}
+
+@media screen and (max-width: 1024px) {
+  .projects {
+      &__container {
+        display: grid;
+        grid-template-columns: 1fr;  
+      }
+      &__item{
+        img {
+          width: 300px;
+          height:auto;
+        }
+      }
+  }
 }

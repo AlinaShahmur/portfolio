@@ -1,0 +1,16 @@
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+    justify-content: space-evenly;
+    gap: 30px;
+
+}
+
+@media screen and (max-width: 1024px) {
+    .about {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+    }
+}

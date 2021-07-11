@@ -6,33 +6,6 @@ $turquoiseColor:#669999;
   margin:0;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  background-color: $violetColor;
-  &__navbar {
-    display: flex;
-    justify-content: flex-start;
-    flex-basis: 50%;
-  }
-  &__logo {
-    align-self: center;
-    text-transform: uppercase;
-  }
-  &__icons {
-    align-self: center
-  }
-  &__link {
-    text-decoration: none;
-    padding: 15px 20px;
-    color: $whiteColor;
-    &:hover {
-      color: $turquoiseColor;
-      font-weight: 700;
-    }
-  }
-}
-
 
 .section {
   height: calc(100vh - 50px);
@@ -54,7 +27,6 @@ $turquoiseColor:#669999;
   }
 }
 
-
 .title-h1 {
   color:$violetColor;
   font-size: 72px;
@@ -67,6 +39,7 @@ $turquoiseColor:#669999;
 .title-h3 {
   color: $violetColor;
   margin: 20px;
+  text-align: center;
 }
 
 .btn {

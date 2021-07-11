@@ -12,7 +12,7 @@ $turquoiseColor:#669999;
       flex-basis: 50%;
     }
     &__logo {
-      color:$turquoiseColor;
+      color:#FFFFFF;
       font-weight: 700;
       align-self: center;
       text-transform: uppercase;
@@ -23,6 +23,7 @@ $turquoiseColor:#669999;
     }
     &__link {
       text-decoration: none;
+      padding: 15px 20px;
       color: $whiteColor;
       &:hover {
         color: $turquoiseColor;
