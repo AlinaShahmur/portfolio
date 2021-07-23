@@ -1,5 +1,5 @@
 import React from "react";
-import '../Header.scss'
+import './Header.scss'
 
 
 export default function Toggler(props) {

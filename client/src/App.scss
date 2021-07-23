@@ -9,22 +9,6 @@ $turquoiseColor:#669999;
 
 .section {
   height: calc(100vh - 50px);
-  &__main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: $whiteColor;
-    text-align: center;
-    height: 100%;
-    & h1 {
-      font-size: 60px;
-      font-weight: 300;
-    } 
-    & h2 {
-      font-size: 50px;
-      font-weight: 300;
-    }
-  }
 }
 
 .title-h1 {
@@ -36,10 +20,20 @@ $turquoiseColor:#669999;
   padding-top: 30px;
 }
 
+.title-h2 {
+  color: $violetColor;
+  font-size: 60px;
+  text-align: center;
+}
+
 .title-h3 {
   color: $violetColor;
   margin: 20px;
   text-align: center;
+}
+
+a {
+  text-decoration: none;
 }
 
 .btn {

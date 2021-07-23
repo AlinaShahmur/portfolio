@@ -1,20 +1,20 @@
 import './App.scss';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
-import home from './components/Home';
-import about from './components/About';
-import contact from './components/Contact';
-import portfolio from './components/Portfolio'
-import Header from './components/Header';
+import Home from './components/Home/Home';
+import About from './components/About/About';
+import Contact from './components/Contact/Contact';
+import Portfolio from './components/Portfolio/Portfolio'
+import Header from './components/Header/Header';
 
 function App() {
   return (
     <BrowserRouter> 
     <Header/>
       <Switch>
-          <Route component = {home} path = '/' exact />
-          <Route component = {about} path = '/about'/>
-          <Route component = {portfolio} path = '/portfolio'/>
-          <Route component = {contact} path = '/contact'/>
+          <Route component = {Home} exact path = '/' />
+          <Route component = {About}  path = '/about' />
+          <Route component = {Portfolio} path = '/portfolio'/>
+          <Route component = {Contact} path = '/contact'/>
       </Switch>
     </BrowserRouter>
   )

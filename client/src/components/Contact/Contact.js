@@ -1,8 +1,9 @@
 import React, {useState} from "react";
 import './Contact.scss'
+import {useTranslation} from "react-i18next";
 
 export default function Contact(props) {
-
+    const { t } = useTranslation()
     const [inputValues, setInputValues] = useState({
         name: '',
         email: '',
@@ -90,28 +91,28 @@ export default function Contact(props) {
     return (
         <section className = "section">
             <div className = "contact">
-                <h1 className = "title-h1">Contact</h1>
+                <h1 className = "title-h1">{t('contact')}</h1>
                     <div className = "contact__item">
-                        <h3  className = "title-h3">Send me an email</h3>
+                        <h3  className = "title-h3">{t('send_me_email')}</h3>
                         <form className = "contact__form form" onSubmit = {submitHandler} noValidate>
                             <div className = "form__control">
-                                <input value = {inputValues.name} onChange = {getNameHandler} type="text" placeholder = "name" ></input>
+                                <input value = {inputValues.name} onChange = {getNameHandler} type="text" placeholder = {t("name")} ></input>
                                 <p className = "form__error">{errors.name}</p>
                             </div>
                             <div className = "form__control">
-                                <input value = {inputValues.email} onChange = {getEmailHandler} type= "email" placeholder = "email"></input>
+                                <input value = {inputValues.email} onChange = {getEmailHandler} type= "email" placeholder = {t("email")}></input>
                                 <p className = "form__error">{errors.email}</p>
                             </div>
                             <div className = "form__control">
-                                <input value = {inputValues.phNumber} onChange = {getPhoneHandler} placeholder = "phone number"></input>
+                                <input value = {inputValues.phNumber} onChange = {getPhoneHandler} placeholder = {t("phone_number")}></input>
                                 <p className = "form__error">{errors.phNumber}</p>
                             </div>
                             <div className = "form__control">
-                                <textarea value = {inputValues.message} onChange = {getMessageHandler} placeholder = "your message"></textarea>
+                                <textarea value = {inputValues.message} onChange = {getMessageHandler} placeholder = {t("your_message")}></textarea>
                                 <p className = "form__error">{errors.message}</p>
                             </div>
                             <div className= "form__button">
-                                <button className = "btn">Send</button>
+                                <button className = "btn">{t('send')}</button>
                             </div>
                         </form>
                 </div>              

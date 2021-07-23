@@ -24,6 +24,8 @@
     "config": "^3.3.6",
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "flag-icon-css": "^3.5.0",
+    "i18next-http-backend": "^1.2.6",
     "mongoose": "^5.12.15",
     "nodemailer": "^6.6.2",
     "react-icons": "^4.2.0",

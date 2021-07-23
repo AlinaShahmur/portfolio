@@ -4,10 +4,14 @@ import './ProgressBar.scss'
 export default function ProgressBar(props) {
     const [completed, setCompleted] = useState('0%');
     useEffect(() => {
-        setTimeout(() => {
+        const timer = setTimeout(() => {
             setCompleted(props.completed)
         }, 1500);
+        return () => {
+            clearTimeout(timer)
+        }
     }, [])
+    
     return (
         <React.Fragment>
             <span className = "progress-bar__title">{props.skill}</span>

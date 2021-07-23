@@ -4,7 +4,7 @@ $turquoiseColor:#669999;
 
 .header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     background-color: $violetColor;
     &__navbar {
       display: flex;
@@ -33,6 +33,9 @@ $turquoiseColor:#669999;
     &__toggler {
         display: none;
     }
+    &__langToggler {
+      background-color: $violetColor;
+    }
   }
   
   .active-link {
@@ -40,10 +43,62 @@ $turquoiseColor:#669999;
       font-weight: 700;
   }
 
+  .dropdown {
+    position: relative;
+    align-self: center;
+  }
+  .dropdown ul li {
+    list-style-type: none;
+  }
+
+  .dropdown-toggle {
+    background-color: $violetColor;
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+  }
+
+
+  .dropdown-toggle::after {
+    content: '';
+    display: inline-block;
+  }
+
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    padding:0;
+    left:-13px;
+  }
+  .dropdown-menu.active {
+    display: block;
+  }
+  .dropdown-item  {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    cursor: pointer;
+    color: $whiteColor;
+    font-family: 'Montserrat', sans-serif;
+    background-color: $violetColor;
+    outline: none;
+    border: none;
+  }
+
+  .dropdown-item:hover {
+    background-color: rgba(117, 97, 174, 0.5)
+  }
+
+
   @media screen and (max-width: 768px) {
     .header {
       flex-direction: column;
+      &__logo {
+        order: 1
+      }
         &__toggler {
+          order: 2;
             display: block;
             & input {
               display: none;
@@ -64,11 +119,18 @@ $turquoiseColor:#669999;
         }
         &__navbar {
           flex-direction: column;
+          order:3;
         }
         &__icons{
           margin: 15px;
+          order: 4
         }
     }
+
+    .dropdown {
+      order: 5
+    }
+
     .toggler-label::before,
     .toggler-label::after {
     content: '';

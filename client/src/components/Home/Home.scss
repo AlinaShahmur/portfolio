@@ -1,0 +1,29 @@
+$violetColor: #7561AE;
+$whiteColor: #FFFFFF; 
+$turquoiseColor:#669999;
+
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: $turquoiseColor;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+
+.main h1, h2 {
+    font-weight: 300;
+}
+
+.home-link {
+    padding: 10px 15px;
+    color: $whiteColor;
+    background-color: $violetColor;
+    border-radius: 5px;
+}
+
+.home-link:hover {
+    background-color: rgba(117, 97, 174, 0.5);
+}

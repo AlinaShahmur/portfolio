@@ -14,13 +14,17 @@ $turquoiseColor:#669999;
         color: $turquoiseColor
       }
       img {
-        width: 450px;
+        width: 300px;
         height:auto;
         border-radius: 10px;
         box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.3);
+        &:hover {
+          opacity: 0.5;
+        }
       }
     }
   }
+
 
 @media screen and (max-width: 1200px) {
     .projects {
@@ -28,19 +32,25 @@ $turquoiseColor:#669999;
           display: grid;
           grid-template-columns: 1fr 1fr;  
         }
-    }
-}
-
-@media screen and (max-width: 1024px) {
-    .projects {
-        &__container {
-          display: grid;
-          grid-template-columns: 1fr;  
+        &__item{
+          img {
+            width: 450px;
+            height:auto;
+          }
         }
     }
 }
 
 @media screen and (max-width: 1024px) {
+  .projects {
+      &__container {
+        display: grid;
+        grid-template-columns: 1fr;  
+      }
+  }
+}
+
+@media screen and (max-width: 768px) {
   .projects {
       &__container {
         display: grid;
@@ -54,3 +64,4 @@ $turquoiseColor:#669999;
       }
   }
 }
+

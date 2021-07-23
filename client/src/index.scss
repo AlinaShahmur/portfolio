@@ -1,6 +1,8 @@
-body {
+html {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+}
+
+html[lang = 'he'] {
+  font-family: 'Rubik', sans-serif;
 }

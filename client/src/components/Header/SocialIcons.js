@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { SocialIcon } from "react-social-icons";
-import '../Header.scss'
+import './Header.scss'
 
 export default function SocialIcons() {
     return (
@@ -17,6 +17,11 @@ export default function SocialIcons() {
             </SocialIcon>
             <SocialIcon 
             url = "https://www.facebook.com/profile.php?id=100007754797490" 
+            target = "_blank"
+            style = {{height: 30, width: 30, marginRight: 15}}>
+            </SocialIcon>
+            <SocialIcon 
+            url = "https://api.whatsapp.com/send?phone=972515260895" 
             target = "_blank"
             style = {{height: 30, width: 30, marginRight: 15}}>
             </SocialIcon>
