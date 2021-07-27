@@ -30,7 +30,7 @@ export default function Contact(props) {
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify(formData),
             }
-            fetch('http://localhost:8000/api/mails',fetchParams)
+            fetch('/api/mails',fetchParams)
             .then(data => data.json())
             .then(resp => alert(resp))
             

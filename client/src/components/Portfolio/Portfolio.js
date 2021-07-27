@@ -6,7 +6,7 @@ export default function Project() {
     const { t } = useTranslation()
     const [projects, setProjects] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:8000/api/projects')
+        fetch('/api/projects')
         .then(response => {
             if (response.ok) {
                 return response.json()
