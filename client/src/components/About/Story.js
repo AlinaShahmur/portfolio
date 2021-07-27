@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import Card from "../UI/Card";
-import './Story.scss'
+import './About.scss'
 
 export default function Story() {
     const {t} = useTranslation();

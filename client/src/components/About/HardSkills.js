@@ -1,7 +1,7 @@
 import React from "react";
-import ProgressBar from '../About/ProgressBar'
+import Skill from "./Skill";
 import Card from "../UI/Card";
-import './ProgressDiagram.scss'
+import './About.scss'
 import { useTranslation } from "react-i18next";
 
 export default function ProgressDiagram(props) {
@@ -12,8 +12,7 @@ export default function ProgressDiagram(props) {
             <Card>
                 <div className = "hard-skills">
                     <h1 className = 'title-h3'>{t('hard_skills')}</h1>
-                        {props.skills.map(item => <ProgressBar key = {item.id} 
-                                                    completed = {item.completed}
+                        {props.skills.map(item => <Skill key = {item.id} 
                                                     skill = {item.skill}
                                                     />)}
                 </div>

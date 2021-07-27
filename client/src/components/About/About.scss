@@ -1,3 +1,24 @@
+$violetColor: #7561AE;
+$whiteColor: #FFFFFF; 
+$turquoiseColor:#669999;
+
+.progress-bar {
+    height: 20px;
+    width: 100%;
+    background-color: #d9d9d9;
+    margin-bottom: 1.5em;
+    &__filler {
+        height: 100%;
+        background-color: $turquoiseColor;
+        border-radius: inherit;
+        text-align: right;
+        transition: width 1s ease-in-out
+    }
+    &__label {
+        color: $whiteColor;
+    }
+}
+
 .about {
     display: flex;
     flex-wrap: wrap;
@@ -6,6 +27,31 @@
     gap: 30px;
 
 }
+
+.soft-skills {
+    margin: 3rem;
+}
+
+.soft-skill {
+    padding: 10px;
+    &__label{
+        padding: 20px;
+    }
+}
+
+.hard-skills {
+    margin: 3rem;
+}
+
+.story {
+    max-width: 600px;
+    & p {
+        line-height: 2rem;
+        padding: 2rem;
+    }
+    transition: transform 0.5s;
+}
+
 
 @media screen and (max-width: 1024px) {
     .about {

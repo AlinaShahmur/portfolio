@@ -2,8 +2,8 @@ import React from 'react';
 import Card from '../UI/Card';
 import { FaBullseye } from 'react-icons/fa'
 import {IconContext} from "react-icons"
-import './SoftSkill.scss'
-export default function SoftSkill(props) {
+import './About.scss'
+export default function Skill(props) {
 
     return (
         <div className = 'soft-skill'>
