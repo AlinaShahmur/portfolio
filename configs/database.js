@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const config = require('config');
-const portfolioDB = config.get('Dbmongo');
+require('dotenv').config()
+const portfolioDB = process.env.DB_STRING
 
 
 mongoose.connect(portfolioDB, {useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true, useFindAndModify: false})

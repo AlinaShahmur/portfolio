@@ -7,6 +7,7 @@ const PORT = process.env.PORT || config.get('port')
 const mailRouter = require('./routes/mails')
 const projectsRouter = require('./routes/projects')
 const cors = require('cors')
+require('dotenv').config()
 
 app.use(express.json());
 app.use(cors())
