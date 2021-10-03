@@ -12,8 +12,9 @@ export default function About() {
                         {id: 2, skill: 'CSS'},
                         {id: 3, skill: 'Java Script'},
                         {id: 4, skill: 'React'},
-                        {id: 5, skill: 'Angular'},
-                        {id: 6, skill: 'NodeJs'}]
+                        {id: 5, skill: 'NodeJs'},
+                        {id: 6, skill: 'MongoDb'},
+                        {id: 6, skill: 'Git'}]
 
     const softSkills = [{id: 1, skill: t('self_learning_ability')},
                         {id: 2, skill: t('problem_solving_skills')},
