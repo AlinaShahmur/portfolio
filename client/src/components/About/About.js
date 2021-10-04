@@ -1,12 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import HardSkills from "./HardSkills";
 import SoftSkills from "./SoftSkills";
 import Story from './Story';
 import Image from './Image'
 import './About.scss'
 import { useTranslation } from "react-i18next";
+import { withRouter } from "react-router";
 
-export default function About() {
+function About(props) {
+    const [isH1Visible, setIsH1Visible] = useState(false)
+    props.history.listen(() => {
+        setIsH1Visible(false)
+        setTimeout(() => {
+          setIsH1Visible(true)
+        },500)
+      })
+      useEffect(() => {
+        const timer = setTimeout(() => {
+          setIsH1Visible(true)
+        },500)
+        return () => {
+          clearTimeout(timer)
+        }
+      },[])
+    const titleH1Classes = isH1Visible ? "title-h1 visible" : "title-h1"
     const { t } = useTranslation()
     const hardSkills = [{id: 1, skill: 'HTML'},
                         {id: 2, skill: 'CSS'},
@@ -23,7 +40,7 @@ export default function About() {
                         {id: 5, skill: t('attention_to_details')}]
     return (
         <section className = "section">
-            <h1 className = "title-h1">{t('about_me')}</h1>
+            <h1 className = {titleH1Classes}>{t('about_me')}</h1>
             <div className = 'about'>
                 <Image/>
                 <Story/>
@@ -33,4 +50,6 @@ export default function About() {
         </section>
     )
 }
+
+export default withRouter(About)
 

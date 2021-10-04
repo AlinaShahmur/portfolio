@@ -18,14 +18,23 @@ $turquoiseColor:#669999;
   text-align: center;
   margin-bottom: 30px;
   padding-top: 30px;
-
+  opacity:0;
+  transform: translateY(-10px);
+  transition: all 0.7s;
 }
+
+.title-h1.visible {
+  opacity:1;
+  transform: translateY(10px)
+}
+
 
 .title-h2 {
   color: $violetColor;
   font-size: 60px;
   text-align: center;
 }
+
 
 .title-h3 {
   color: $violetColor;

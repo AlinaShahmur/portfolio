@@ -1,8 +1,9 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import './Contact.scss'
 import {useTranslation} from "react-i18next";
+import { withRouter } from "react-router";
 
-export default function Contact(props) {
+function Contact(props) {
     const { t } = useTranslation()
     const [inputValues, setInputValues] = useState({
         name: '',
@@ -16,6 +17,24 @@ export default function Contact(props) {
         phNumber: '',
         message: ''
     })
+
+    const [isH1Visible, setIsH1Visible] = useState(false)
+    props.history.listen(() => {
+        setIsH1Visible(false)
+        setTimeout(() => {
+          setIsH1Visible(true)
+        },500)
+      })
+      useEffect(() => {
+        const timer = setTimeout(() => {
+          setIsH1Visible(true)
+        },500)
+        return () => {
+          clearTimeout(timer)
+        }
+      },[])
+    const titleH1Classes = isH1Visible ? "title-h1 visible" : "title-h1"
+
     const submitHandler = (event) => {       
         event.preventDefault();
         if (formValidationHandler()) {
@@ -91,7 +110,7 @@ export default function Contact(props) {
     return (
         <section className = "section">
             <div className = "contact">
-                <h1 className = "title-h1">{t('contact')}</h1>
+                <h1 className = {titleH1Classes}>{t('contact')}</h1>
                     <div className = "contact__item">
                         <h3  className = "title-h3">{t('send_me_email')}</h3>
                         <form className = "contact__form form" onSubmit = {submitHandler} noValidate>
@@ -121,3 +140,5 @@ export default function Contact(props) {
         </section>
     )
 }
+
+export default withRouter(Contact)

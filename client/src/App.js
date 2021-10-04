@@ -11,10 +11,19 @@ function App() {
     <BrowserRouter> 
     <Header/>
       <Switch>
-          <Route component = {Home} exact path = '/' />
-          <Route component = {About}  path = '/about' />
-          <Route component = {Portfolio} path = '/portfolio'/>
-          <Route component = {Contact} path = '/contact'/>
+          <Route  exact path = '/' >
+            <Home/>
+          </Route>
+          <Route  path = '/about'>
+            <About />
+          </Route>
+          <Route path = '/portfolio'>
+            <Portfolio />
+          </Route>
+          <Route path = '/contact'>
+            <Contact/>
+          </Route>
+
       </Switch>
     </BrowserRouter>
   )

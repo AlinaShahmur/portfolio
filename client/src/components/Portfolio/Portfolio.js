@@ -1,10 +1,12 @@
 import React, {useState, useEffect} from "react";
 import './Portfolio.scss';
 import { useTranslation } from "react-i18next";
+import { withRouter } from "react-router";
 
-export default function Project() {
+ function Project(props) {
     const { t } = useTranslation()
     const [projects, setProjects] = useState([]);
+    const [isH1Visible, setIsH1Visible] = useState(false)
     useEffect(() => {
         fetch('/api/projects')
         .then(response => {
@@ -16,11 +18,25 @@ export default function Project() {
         .then(data => setProjects(data))
         .catch(e => console.log(e))
     },[])
-
+    props.history.listen(() => {
+      setIsH1Visible(false)
+      setTimeout(() => {
+        setIsH1Visible(true)
+      },500)
+    })
+    useEffect(() => {
+      const timer = setTimeout(() => {
+        setIsH1Visible(true)
+      },500)
+      return () => {
+        clearTimeout(timer)
+      }
+    },[])
+    const titleH1Classes = isH1Visible ? "title-h1 visible" : "title-h1"
     return (
         <section className = "section">
         <div className = "projects">
-            <h1 className = "title-h1">{t('my_projects')}</h1>
+            <h1 className = {titleH1Classes}>{t('my_projects')}</h1>
             <div className = "projects__container">
                 {projects.map((project, index) =>( 
                     <div className = "projects__item" key = {index}>
@@ -46,3 +62,5 @@ export default function Project() {
         </section>
     )
 }
+
+export default withRouter(Project)
