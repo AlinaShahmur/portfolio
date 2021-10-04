@@ -24,12 +24,21 @@ export default function Project() {
             <div className = "projects__container">
                 {projects.map((project, index) =>( 
                     <div className = "projects__item" key = {index}>
-                        <a href = {project.url} key = {index} target = "_blank">                    
-                            <img src = {project.img}></img>
-                            <h3>{project.name}</h3>        
-                        </a>
-                        <p>{project.description}</p>   
-                        <a href = {project.github} target = "_blank">GitHub repository</a>   
+                                <div className = 'screen-project'>
+                                    <div className = 'screen-project__frontside'>
+                                        <img src = {project.img} alt = 'project screen'></img>
+                                    </div>   
+                                    <div className = 'screen-project__backside'>
+                                            <a href = {project.url} key = {index} target = "_blank" rel="noreferrer"><h3>{project.name}</h3></a>
+                                            <div className = 'technologies'>
+                                                {project.technologies.map((item, index) => <div key = {index} className = 'technologies__item'>{item}</div>)} 
+                                            </div>                   
+                                            <p>{project.description}</p>   
+                                            <a href = {project.github} target = "_blank" rel="noreferrer">GitHub repository</a>   
+                                    </div>                                    
+                                </div>                                                                
+
+                        
                     </div>
                 ))} 
             </div>  
