@@ -1,5 +1,5 @@
 # Portfolio
-## The Website-porftolio for Frontend-developer
+## The Website-porftolio for Full Stack Web-developer
 The main purpose of the website is to help potential clients or potential employees to get know the full stack web developer and to make decision whether he/she suits for particular project or job. 
 ## Technologies used in the project:
 1. HTML5, CSS3, JavaScript
