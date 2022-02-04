@@ -12,4 +12,4 @@ The main purpose of the website is to help potential clients or potential employ
 I used React library in order to keep component based approach and keep my code more clean and structured. CSS-code was written with using preprocessor SCSS in order to make the 
 cumbersome CSS-code more structured and optimized. NodeJS(js run-time environment) and Express(server-side js framework) provided me the server-side of Web-site that allowed me to 
 implement the next feauters: to send mail from web-site and to unload data (Frontend-developer projects data) from the database MongoDB.
-
+The web-site is on the hosting now, URL: http://alinashahmurov.herokuapp.com/portfolio
