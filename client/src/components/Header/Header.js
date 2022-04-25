@@ -10,8 +10,7 @@ import SocialIcons from "./SocialIcons";
 
 export default function Header() {
     const languages = [{code: 'en', name: 'English', country_code: 'gb'},
-                        {code: 'he', name: 'עברית',country_code: 'il', dir:'rtl'},
-                        {code: 'ru', name: 'Русский',country_code: 'ru'}]
+                        {code: 'he', name: 'עברית',country_code: 'il', dir:'rtl'}]
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => {
