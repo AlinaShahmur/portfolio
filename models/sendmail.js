@@ -1,13 +1,16 @@
 const nodemailer = require("nodemailer");
 
+const NODEMAILER_PASS = process.env.NODEMAILER_PASS;
+const NODEMAILER_USER = process.env.NODEMAILER_USER;
+const NODEMAILER_SERVICE = process.env.NODEMAILER_USER;
 
     // Generate test SMTP service account from ethereal.email
     // create reusable transporter object using the default SMTP transport
 let transporter = nodemailer.createTransport({
-    service: 'gmail',
+    service: NODEMAILER_SERVICE,
     auth: {
-        user: "ashaturnaya@gmail.com",
-        pass: "hofzhtxdmjiieecu" 
+        user: NODEMAILER_USER,
+        pass: NODEMAILER_PASS
         }
     }
 )
