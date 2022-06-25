@@ -2,7 +2,7 @@ const nodemailer = require("nodemailer");
 
 const NODEMAILER_PASS = process.env.NODEMAILER_PASS;
 const NODEMAILER_USER = process.env.NODEMAILER_USER;
-const NODEMAILER_SERVICE = process.env.NODEMAILER_USER;
+const NODEMAILER_SERVICE = process.env.NODEMAILER_SERVICE;
 
     // Generate test SMTP service account from ethereal.email
     // create reusable transporter object using the default SMTP transport
